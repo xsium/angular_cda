@@ -43,11 +43,16 @@
     .nav-item a{
       color: #f4f4f4;
     }
+
     .nav-item a:active{
       color: #7762d6 ;
     }
     .nav-item a:hover{
       color: #7762d6 ;
+    }
+    .nav-link.active{
+      color: #7762d6 !important;
+      text-decoration: underline;
     }
     #logo{
       width: 200px;
