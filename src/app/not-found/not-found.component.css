@@ -4,6 +4,16 @@
 /***********************************
 			/* 1. BODY */
 /***********************************/
+app-root{
+    height: 100vh;
+
+display: block;
+   
+  }
+main{
+    display: inline;
+
+}
 
 /* * {
   margin: 0;
@@ -18,6 +28,7 @@
 
     .not-found-template {
       height: 100%;
+      width: 100%;
       -webkit-text-size-adjust: none;
   overflow: hidden;
   /* padding: 0;
