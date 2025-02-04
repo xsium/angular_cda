@@ -11,19 +11,19 @@ import { OneFriendComponent } from '../one-friend/one-friend.component';
 })
 export class ListFriendsComponent {
   listFriendsAuth:boolean=true;
-  searchresult:string="";
+  searchresult:string="aucun résultats...";
   constructor(){
     setTimeout(() => {
       this.listFriendsAuth = false;
     }, 3000);
   }
-  readEvent(e : any): void {
-    e.target.innerText="Ajouté!";
+  readEvent(e : Event): void {
+    (<HTMLInputElement>e.target).innerHTML="Ajouté!";
     setTimeout(() => {
-      e.target.innerText="Ajouter un ami";
+      (<HTMLInputElement>e.target).innerHTML="Ajouter un ami";
     }, 3000);
   }
-  readInput(e :any): void {
-    this.searchresult = e.target.value;
+  readInput(e : Event): void {
+    this.searchresult = (<HTMLInputElement>e.target).value;
   }
 }
