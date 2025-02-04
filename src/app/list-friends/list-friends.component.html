@@ -1,1 +1,24 @@
-<app-one-friend></app-one-friend>
+<div
+  id="list-friends"
+  class="container-fluid w-100 d-flex flex-column justify-content-center align-items-center"
+>
+  <h1>List Friends (Property Binding)</h1>
+  <div id="searchdiv" class="m-5 d-flex flex-column align-items-center">
+    <input
+      (input)="readInput($event)"
+      type="text"
+      name="search"
+      id="searchbar"
+      class="w-100"
+    />
+    <p class="mw-100">{{ searchresult }}</p>
+  </div>
+  <app-one-friend></app-one-friend>
+  <button
+    class="btn mt-4 btn-success w-100"
+    [disabled]="listFriendsAuth"
+    (click)="readEvent($event)"
+  >
+    Ajouter un Ami
+  </button>
+</div>

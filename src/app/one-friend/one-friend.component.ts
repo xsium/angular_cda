@@ -13,7 +13,7 @@ export class OneFriendComponent {
   oneFriendStatus : string = this.createOneFriendStatus();
   oneFriendBio : string = "ma life, lorem ipsum dolor sit amet, blablabla...";
   oneFriendXss : string = "<script>alert('Hello, XSS')</script>";
-
+  oneFriendImgUrl:string="https://picsum.photos/seed/picsum/150/150";
   createOneFriendStatus() : string {
      if(Math.random()>0.5){
       return "Online";
