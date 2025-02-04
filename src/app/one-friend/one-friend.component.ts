@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Output,EventEmitter } from '@angular/core';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-one-friend',
-  imports: [],
+  imports: [NgStyle],
   templateUrl: './one-friend.component.html',
   styleUrl: './one-friend.component.css'
 })
@@ -22,5 +23,20 @@ export class OneFriendComponent {
   }
   getOneFriendStatus() : string {
     return this.oneFriendStatus;
+  }
+  getColor() : string {
+    if (this.getOneFriendStatus().localeCompare("Offline")){
+      console.log("red");
+      return ("red");
+    }
+    else {
+      console.log("green");
+      return("green");
+    }
+  }
+
+  @Output() nameOutput = new EventEmitter<string>();
+  constructor(){
+    this.nameOutput.emit(this.oneFriendName);
   }
 }

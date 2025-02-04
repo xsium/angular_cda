@@ -5,7 +5,7 @@
     class="card-img-top"
     [alt]="oneFriendName"
   />
-  <div class="card-header">
+  <div class="card-header" [ngStyle]="{ 'background-color': getColor() }">
     <p class="card-title">{{ oneFriendName }}</p>
     <p class="card-subtitle">Status: {{ getOneFriendStatus() }}</p>
   </div>

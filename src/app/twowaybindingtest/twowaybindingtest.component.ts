@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-twowaybindingtest',
-  imports: [RouterModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: './twowaybindingtest.component.html',
   styleUrl: './twowaybindingtest.component.css'
 })

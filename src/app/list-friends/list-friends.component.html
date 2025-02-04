@@ -13,7 +13,10 @@
     />
     <p class="mw-100">{{ searchresult }}</p>
   </div>
-  <app-one-friend></app-one-friend>
+  <div id="friendlist">
+    <div>{{ friendlistName }}</div>
+  </div>
+  <app-one-friend (nameOutput)="onNameOutput($event)"></app-one-friend>
   <button
     class="btn mt-4 btn-success w-100"
     [disabled]="listFriendsAuth"
