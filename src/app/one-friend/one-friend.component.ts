@@ -34,9 +34,15 @@ export class OneFriendComponent {
       return("green");
     }
   }
+  @Output() nameEvent = new EventEmitter<string>();
 
-  @Output() nameOutput = new EventEmitter<string>();
+  nameOutput(name :string){
+    this.nameEvent.emit(name);
+    console.log( "emitting friend name"+ name );
+  }
   constructor(){
-    this.nameOutput.emit(this.oneFriendName);
+    setTimeout(() => {
+      this.nameOutput(this.oneFriendName);
+    }, 3000);
   }
 }

@@ -14,9 +14,16 @@
     <p class="mw-100">{{ searchresult }}</p>
   </div>
   <div id="friendlist">
-    <div>{{ friendlistName }}</div>
+    <div class="btn m-3 btn-success">{{ friendlistName }}</div>
   </div>
-  <app-one-friend (nameOutput)="onNameOutput($event)"></app-one-friend>
+  <div class="d-flex flex-row">
+    <app-one-friend
+      class="m-2"
+      *ngFor="let friend of listFriendTab; index as i"
+      (nameEvent)="onNameOutput($event)"
+      >{{ i }}/{{ friend }}</app-one-friend
+    >
+  </div>
   <button
     class="btn mt-4 btn-success w-100"
     [disabled]="listFriendsAuth"
