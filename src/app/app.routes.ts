@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
+    {path:'',title: 'App Home', component:HomeComponent},
     {path:'home',title: 'App Home', component:HomeComponent},
     {path:'cours',title: 'App Cours', component:HomeComponent},
     { path: 'tp', loadComponent: () => import('./tphub/tphub.component').then(m => m.TphubComponent) },

@@ -22,16 +22,23 @@
     </div>
   </div>
   <!-- END Lamp -->
-  <section class="error">
+  <section
+    class="container mx-auto d-flex justify-content-center align-items-center"
+  >
     <!-- Content -->
-    <div class="error__content">
-      <div class="error__message message">
-        <h1 class="message__title">Page Not Found</h1>
-        <p class="message__text">
+    <div
+      class="container mx-auto d-flex justify-content-center align-items-center"
+    >
+      <div class="d-flex flex-column justify-content-center">
+        <h1 class="text-center">Page Not Found</h1>
+        <p class="text-center">
           We're sorry, the page you were looking for isn't found here. The link
           you followed may either be broken or no longer exists. Please try
-          again, or take a look at our.
+          again, or take a look at our starry sky.
         </p>
+        <a routerLink="/home" class="btn btn-primary text-light m-3 p-3 mx-auto"
+          >Retour à l'accueil</a
+        >
       </div>
       <div class="error__nav e-nav">
         <a routerLink="/home" class="e-nav__link"></a>
