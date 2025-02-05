@@ -1,8 +1,0 @@
-#searchdiv{
-    width: 300px;
-    max-width: 100%;
-}
-#searchdiv p{
-    max-width: 100%;
-    word-wrap: break-word;
-}
