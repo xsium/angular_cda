@@ -17,7 +17,7 @@ export class ListFriendsComponent {
     {name: 'Tyrfing', age: 32, mail: 'tyrfing@valhalla.com' },
     {name: 'Charlie', age: 35, mail: 'charlie@nowhere.com' }
   ];
-  profil: {name : string; age : number; mail : string;}={name :"" , age:0 , mail: "" };
+  profil!: {name : string; age : number; mail : string;};
   constructor(){
     setTimeout(() => {
       this.listFriendsAuth = false;

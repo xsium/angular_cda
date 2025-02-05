@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './article.component.css'
 })
 export class ArticleComponent {
-@Input() article = { title: "", content: "", author: "", date: new Date(), type: "" };
+@Input() article! : {id: number; title: string; content: string; author: string; date: Date; type: string } ;
 }
