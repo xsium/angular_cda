@@ -9,6 +9,7 @@ export const routes: Routes = [
     { path: '2wdb', loadComponent: () => import('./twowaybindingtest/twowaybindingtest.component').then(m => m.TwowaybindingtestComponent) },
     { path: 'parent', loadComponent: () => import('./parent/parent.component').then(m => m.ParentComponent) },
     { path: 'blog', loadComponent: () => import('./blog/blog.component').then(m => m.BlogComponent) },
+    { path: 'usermanager', loadComponent: () => import('./usermanager/usermanager.component').then(m => m.UsermanagerComponent) },
     { path: '**', loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent) },
     
 ];

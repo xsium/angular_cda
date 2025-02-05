@@ -75,3 +75,7 @@ body {
   app-blog {
     width: 75%;
 }
+app-usermanager{
+  width: 75%;
+  max-width: 600px;
+}

@@ -1,0 +1,6 @@
+<div class="w-100 rounded bguser">
+  <h2 class="text-center mb-2">TP Component Communication</h2>
+  <app-userdisplay [user]="user"></app-userdisplay>
+  <app-usereditor class="m-2" (sendUser)="onUserUpdated($event)">
+  </app-usereditor>
+</div>
