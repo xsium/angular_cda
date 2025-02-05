@@ -1,0 +1,37 @@
+<div>
+  <h2 class="text-center">Add-Article</h2>
+  <p class="text-center">Ajoutez un article ou un brouillon !</p>
+  <form class="d-flex flex-column justify-content-center">
+    <div class="d-flex flex-column">
+      <label for="titre">Titre Article</label>
+      <input
+        [(ngModel)]="title"
+        type="text"
+        name="article-titre"
+        id="article-titre"
+      />
+    </div>
+    <div class="d-flex flex-column">
+      <label for="">Contenu Article</label>
+      <textarea
+        [(ngModel)]="content"
+        name="article-content"
+        id="article-content"
+      ></textarea>
+    </div>
+    <div>
+      <input
+        class="btn btn-success mt-3 me-3"
+        type="button"
+        value="Ajouter Article"
+        (click)="addArticle()"
+      />
+      <input
+        class="btn btn-secondary mt-3"
+        type="button"
+        value="Ajouter Brouillon"
+        (click)="addBrouillon()"
+      />
+    </div>
+  </form>
+</div>

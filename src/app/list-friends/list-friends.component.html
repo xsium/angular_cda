@@ -19,10 +19,11 @@
   <div class="d-flex flex-row">
     <app-one-friend
       class="m-2"
-      *ngFor="let friend of listFriendTab; index as i"
+      *ngFor="let friend of listFriendTab; let i = index"
+      [profil]="friend"
       (nameEvent)="onNameOutput($event)"
-      >{{ i }}/{{ friend }}</app-one-friend
     >
+    </app-one-friend>
   </div>
   <button
     class="btn mt-4 btn-success w-100"

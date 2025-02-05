@@ -1,13 +1,14 @@
-import { Component, Output,EventEmitter } from '@angular/core';
-import { NgStyle } from '@angular/common';
+import { Component, Output,EventEmitter, Input } from '@angular/core';
+import { NgStyle,NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-one-friend',
-  imports: [NgStyle],
+  imports: [NgStyle,NgClass],
   templateUrl: './one-friend.component.html',
   styleUrl: './one-friend.component.css'
 })
 export class OneFriendComponent {
+  select: boolean = false;
   oneFriendId: number=1;
   oneFriendName: string="Tyrfing";
   oneFriendAge: number = 32;
@@ -39,6 +40,10 @@ export class OneFriendComponent {
   nameOutput(name :string){
     this.nameEvent.emit(name);
     console.log( "emitting friend name"+ name );
+  }
+  @Input() profil = {name : "", age : 0, mail : ""};
+  handleClick():void{
+    this.select=!this.select;
   }
   constructor(){
     setTimeout(() => {

@@ -7,6 +7,8 @@ export const routes: Routes = [
     { path: 'tp', loadComponent: () => import('./tphub/tphub.component').then(m => m.TphubComponent) },
     { path: 'listfriends', loadComponent: () => import('./list-friends/list-friends.component').then(m => m.ListFriendsComponent) },
     { path: '2wdb', loadComponent: () => import('./twowaybindingtest/twowaybindingtest.component').then(m => m.TwowaybindingtestComponent) },
+    { path: 'parent', loadComponent: () => import('./parent/parent.component').then(m => m.ParentComponent) },
+    { path: 'blog', loadComponent: () => import('./blog/blog.component').then(m => m.BlogComponent) },
     { path: '**', loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent) },
     
 ];

@@ -1,0 +1,13 @@
+<div>
+  <h2 class="text-center">Blog Control Center</h2>
+  <app-add-article
+    (sendArticle)="onArticleAdded($event)"
+    (sendBrouillon)="onBrouillonAdded($event)"
+  ></app-add-article>
+  <app-article
+    class="m-2"
+    *ngFor="let article of articles; let i = index"
+    [article]="article"
+  >
+  </app-article>
+</div>
