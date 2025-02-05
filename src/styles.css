@@ -72,3 +72,6 @@ body {
     background-color: #111111;
     flex: 1;
   }
+  app-blog {
+    width: 75%;
+}

@@ -12,6 +12,15 @@
       />
     </div>
     <div class="d-flex flex-column">
+      <label for="author">Pseudo Auteur</label>
+      <input
+        [(ngModel)]="author"
+        type="text"
+        name="article-author"
+        id="article-author"
+      />
+    </div>
+    <div class="d-flex flex-column">
       <label for="">Contenu Article</label>
       <textarea
         [(ngModel)]="content"
